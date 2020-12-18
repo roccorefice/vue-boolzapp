@@ -53,7 +53,35 @@
                     <div class="header_right">
                         nome contatto
                     </div>
-                    <div class="chat_window">
+                    <div class="chat_window" >
+                        <div v-for="message in chatShown.messages"  :class="message.status === 'sent' ? 'sent' : 'received'" >
+                            {{message.text}}
+                            <div class="when">
+                                {{message.date}}
+                            </div>
+                            
+                        </div>
+                        
+                        
+
+                        <!-- <div class="sent">
+                            <div class="message">
+                                sent
+                            </div>
+                            <div class="when">
+                                qwertyuiop
+                            </div>
+                        </div>
+                        
+                        <div class="received">
+                            <div class="message">
+                                received 
+                            </div>
+                            <div class="when">
+                                asdfghjkl
+                            </div>
+                        </div> -->
+
                         
                     </div>
                     <div class="write">

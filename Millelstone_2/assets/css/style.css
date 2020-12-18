@@ -161,24 +161,63 @@ a{
 
 
 
-/* sidebar RIGHT */
+/* SIDEBAR RIGHT */
 .sidebar_right{
     width: 65%;
     height: 100%;
 }
+
+/* header right */
 .header_right{
     height: 10%;
     width: 100%;
     background-color: #EAEAEA;
 }
+
+/* chat window */
 .chat_window{
     height: 80%;
     width: auto;
     background-image: url("../img/sfondo_chat.jpg");
     background-size: contain; 
     overflow-y: scroll;
-
+    position: relative;
 }
+.received{
+    height: auto;
+    max-width: 320px;
+    background-color: #D5F9BA;
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 50px;
+    font-size: 1.2em;
+}
+.sent{
+    height: auto;
+    max-width: 320px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 50px;
+    font-size: 1.2em;
+}
+
+.when{
+    color: grey;
+    font-weight: 100;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+
+
+
 .write{
     height: 10%;
     width: 100%;
