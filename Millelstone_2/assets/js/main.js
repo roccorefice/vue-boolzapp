@@ -46,7 +46,7 @@ let app = new Vue ({
                     },
                     {
                         date: '10/01/2020 17:39',
-                        text: 'Rubare dei libri in biblioteca!',
+                        text: 'Rubare dei libri in biblioteca! 🥷',
                         status: 'received'
                     },
                     {
@@ -63,7 +63,7 @@ let app = new Vue ({
                 messages:[
                     {
                         date: '10/01/2020 17:23',
-                        text: "Signore, come è finita quella questione?",
+                        text: "Signore, com è finita quella questione?",
                         status: 'sent'
                     },
                     {
@@ -83,7 +83,7 @@ let app = new Vue ({
                     },
                     {
                         date: '10/01/2020 17:35',
-                        text: "A dopo, portami due Caramelle Tutti i Gusti +1, ho un calo di zuccheri",
+                        text: "A dopo, portami due Caramelle Tutti i Gusti +1, ho un calo di zuccheri 🍬",
                         status: 'received'
                     }
                 ]
@@ -123,7 +123,7 @@ let app = new Vue ({
                     {
                         date: '10/01/2020 23:13',
                         text: "Tanto già sai come finirà: come l'ultima volta ✌️",
-                        status: " sent"
+                        status: "sent"
                     },
                     {
                         date: '10/01/2020 23:14',
@@ -164,9 +164,13 @@ let app = new Vue ({
         
         
     },
-    // methods: {
+    methods: {
+        clickToViewChat(contatto_cliccato) {
+            this.chatShown = contatto_cliccato;
+            // this.searchString = "";
+        },
  
-    // },
+    },
     // mounted: function(){
         
     // }

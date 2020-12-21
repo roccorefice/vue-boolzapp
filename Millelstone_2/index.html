@@ -40,7 +40,7 @@
                         <input type="search" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <ul class="contatti" v-if="contatti.length > 0">
-                        <li v-for="contatto in contatti" class="contatto d_flex" >
+                        <li v-for="contatto in contatti" class="contatto d_flex" @click="clickToViewChat(contatto)" >
                             <img :src="contatto.avatar">
                             <span>{{contatto.name}}</span>
                         </li>
@@ -53,13 +53,12 @@
                     <div class="header_right">
                         nome contatto
                     </div>
-                    <div class="chat_window" >
+                    <div class="chat_window">
                         <div v-for="message in chatShown.messages"  :class="message.status === 'sent' ? 'sent' : 'received'" >
                             {{message.text}}
                             <div class="when">
                                 {{message.date}}
                             </div>
-                            
                         </div>
                         
                         

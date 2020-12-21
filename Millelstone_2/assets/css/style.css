@@ -197,8 +197,8 @@ a{
     height: auto;
     max-width: 320px;
     background-color: white;
-    position: absolute;
-    right: 0;
+    position: relative;
+    left: 500px;
     border-radius: 20px;
     padding: 20px;
     margin: 10px 50px;
@@ -208,10 +208,10 @@ a{
 .when{
     color: grey;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: 3px;
 }
 
 
