@@ -73,7 +73,7 @@ let app = new Vue ({
                     },
                     {
                         date: '10/01/2020 17:33',
-                        text: "Questa volta TU-SAI-CHI si è palesato così come immaginavamo...",
+                        text: "Anche questa volta TU-SAI-CHI si è palesato così come immaginavamo...",
                         status: 'received'
                     },
                     {
@@ -160,19 +160,38 @@ let app = new Vue ({
                 }
             ]
 
-        }
-        
-        
+        },
+        userMessage : null,
+        reply: null
     },
     methods: {
         clickToViewChat(contatto_cliccato) {
             this.chatShown = contatto_cliccato;
-            // this.searchString = "";
         },
- 
+
+        //funzione che agginge un messaggio dell'utente
+        addMessage: function(){
+            let newMessage = {
+                date: dayjs().format('DD/MM/YYYY HH:mm'),
+                text: this.userMessage,
+                status: 'sent'
+            }
+            this.chatShown.messages.push(newMessage);
+            this.userMessage = '';
+            setTimeout(this.addReply, 1000)
+        },
+        //Funzione che consente risposta automatica dopo 1secondo 
+        addReply: function(){
+            let newReply = {
+                date: dayjs().format('DD/MM/YYYY HH:mm'),
+                text: "Ok Harry!",
+                status: 'received'
+            }
+            this.chatShown.messages.push(newReply);
+        }
     },
     // mounted: function(){
-        
+       
     // }
 });
 

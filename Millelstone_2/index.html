@@ -50,8 +50,17 @@
 
 
                 <div class="sidebar_right">
-                    <div class="header_right">
-                        nome contatto
+                    <div class="header_right contatto d_flex">
+                        <div class="infoUser contatto d_flex">
+                            <img :src="chatShown.avatar" alt="">
+                            <span>{{chatShown.name}}</span> 
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+
+                        </div>
                     </div>
                     <div class="chat_window">
                         <div v-for="message in chatShown.messages"  :class="message.status === 'sent' ? 'sent' : 'received'" >
@@ -60,32 +69,14 @@
                                 {{message.date}}
                             </div>
                         </div>
-                        
-                        
-
-                        <!-- <div class="sent">
-                            <div class="message">
-                                sent
-                            </div>
-                            <div class="when">
-                                qwertyuiop
-                            </div>
-                        </div>
-                        
-                        <div class="received">
-                            <div class="message">
-                                received 
-                            </div>
-                            <div class="when">
-                                asdfghjkl
-                            </div>
-                        </div> -->
-
-                        
                     </div>
-                    <div class="write">
-                        scrivi un messaggio
+                    
+                    <div class="write d_flex">
+                        <i class="fas fa-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="userMessage" @keyup.enter="addMessage">
+                        <i class="fas fa-microphone"></i>
                     </div>
+                    
                 </div>
     
     
@@ -99,9 +90,8 @@
         
 
        
-    
-
-    
+    <!-- day.js -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!-- vueJs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- js -->

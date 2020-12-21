@@ -24,7 +24,6 @@ a{
 
 /* background */
 .background{
-    background-color: aqua;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -32,13 +31,16 @@ a{
 .background_top{
     height: 10%;
     width: auto;
-    background-image: url("../img/grifondoro_banner.jpg");
+    /* background-image: url("../img/grifondoro_banner.jpg"); */
     background-size: contain;
+    background-color: #009688;
 }
 .background_bottom{
     height: 90%;
     width: 100%;
-    background-color: #BA2438;
+    background-color: #DBDBD3;
+    opacity: 50%;
+
 }
 .chat_container{
     width: 1425px;
@@ -49,6 +51,8 @@ a{
     top: 20px;
     left: 50%;
     transform: translate(-50%);
+    box-shadow: 0px 0px 10px grey ;
+
     
 }
 
@@ -89,14 +93,14 @@ a{
 .notifiche{
     height: 10%;
     width: 100%;
-    background-color: #CB9746;
+    background-color: #8EDAFD;
     align-items: center;
     padding: 20px;
     font-size: 18px;
     cursor: pointer;
 }
 .notifiche i{
-    color: #CB9746;
+    color: #8EDAFD;
     font-size: 28px;
     background-color: white;
     padding: 12px;
@@ -109,7 +113,7 @@ a{
 .search{
     width: 100%;
     height: 80px;
-    background-color: #E0D6CD;
+    background-color: #EAEAEA;
     padding: 10px;
 }
 .search input{
@@ -139,7 +143,7 @@ a{
 .contatto{
     align-items: center;
     height: 90px;
-    border: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     padding: 10px;
 }
 .contatto img{
@@ -172,6 +176,18 @@ a{
     height: 10%;
     width: 100%;
     background-color: #EAEAEA;
+    justify-content: space-between;
+    border-left: 1px solid lightgrey;
+}
+.header_right i {
+    justify-content: flex-end;
+    padding: 5px;
+    color: grey;
+    font-size: 24px;
+    cursor: pointer;
+}
+.header_right .icons{
+
 }
 
 /* chat window */
@@ -204,7 +220,6 @@ a{
     margin: 10px 50px;
     font-size: 1.2em;
 }
-
 .when{
     color: grey;
     font-weight: 100;
@@ -215,11 +230,29 @@ a{
 }
 
 
-
-
-
+/* write */
 .write{
-    height: 10%;
+    height: 80px;
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: #EAEAEA;
+    padding: 10px;
 }
+.write input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    padding-left: 25px;
+}
+.write i{
+    color: #B1B1B1;
+    font-size: 28px;
+    padding: 15px 20px;
+}
+.write i:hover{
+    cursor: pointer;
+}
+
+
+
