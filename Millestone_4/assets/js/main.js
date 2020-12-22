@@ -162,7 +162,9 @@ let app = new Vue ({
 
         },
         userMessage : null,
-        reply: null
+        reply: null,
+        searchString: '',
+        view :[]
     },
     methods: {
         clickToViewChat(contatto_cliccato) {
@@ -180,19 +182,35 @@ let app = new Vue ({
             this.userMessage = '';
             setTimeout(this.addReply, 1000)
         },
-        //Funzione che consente risposta automatica dopo 1secondo 
+        //Funzione che mostra risposta automatica dopo 1secondo 
         addReply: function(){
             let newReply = {
-                date: dayjs().format('DD/MM/YYYY HH:mm'),
+                date: dayjs().format('DD/MM/YYYY HH:MM'),
                 text: "Ok Harry!",
                 status: 'received'
             }
             this.chatShown.messages.push(newReply);
         }
     },
-    // mounted: function(){
-       
-    // }
+        //Funzione che ricerca nella lista dei conttatti
+        // match: function() {
+        //     this.contatti.forEach(element => {
+        //         const searchString = this.searchString.toLowerCase();
+        //         const name = element.name.toLowerCase();
+        //         if(name.includes(searchString)){
+        //             element.visible = true;
+        //             console.log(contacts);
+        //         } else {
+        //             element.visible = false;
+        //             console.log(contacts);
+        //         }
+        //     });
+        // },
+        // filteredContact: function() {
+        //     return this.contatti.filter(elementiFiltrati => {
+        //         return elementiFiltrati.name.toLowerCase().includes(this.searchString.toLowerCase());
+        //     });
+        // },
 });
 
 
