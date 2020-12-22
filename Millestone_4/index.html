@@ -37,10 +37,10 @@
                     </div>
                     <div class="search d_flex">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchString" >
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputSearch" @keyup="match" >
                     </div>
                     <ul class="contatti" >
-                        <li v-for="(contatto, index) in contatti" class="contatto d_flex" @click="clickToViewChat(contatto)">
+                        <li v-for="(contatto, index) in contatti" class="contatto d_flex" @click="clickToViewChat(contatto)" v-if="contatto.visible">
                             <img :src="contatto.avatar">
                             <span>{{contatti[index].name}}</span>
                         </li>

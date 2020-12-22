@@ -163,7 +163,7 @@ let app = new Vue ({
         },
         userMessage : null,
         reply: null,
-        searchString: '',
+        inputSearch: '',
         view :[]
     },
     methods: {
@@ -182,6 +182,7 @@ let app = new Vue ({
             this.userMessage = '';
             setTimeout(this.addReply, 1000)
         },
+        
         //Funzione che mostra risposta automatica dopo 1secondo 
         addReply: function(){
             let newReply = {
@@ -190,27 +191,21 @@ let app = new Vue ({
                 status: 'received'
             }
             this.chatShown.messages.push(newReply);
-        }
-    },
+        },
+
         //Funzione che ricerca nella lista dei conttatti
-        // match: function() {
-        //     this.contatti.forEach(element => {
-        //         const searchString = this.searchString.toLowerCase();
-        //         const name = element.name.toLowerCase();
-        //         if(name.includes(searchString)){
-        //             element.visible = true;
-        //             console.log(contacts);
-        //         } else {
-        //             element.visible = false;
-        //             console.log(contacts);
-        //         }
-        //     });
-        // },
-        // filteredContact: function() {
-        //     return this.contatti.filter(elementiFiltrati => {
-        //         return elementiFiltrati.name.toLowerCase().includes(this.searchString.toLowerCase());
-        //     });
-        // },
+        match: function() {
+            this.contatti.forEach(element => {
+                const inputSearch = this.inputSearch.toLowerCase();
+                const name = element.name.toLowerCase();
+                if(name.includes(inputSearch)){
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                }
+            });
+        },
+    },
 });
 
 
