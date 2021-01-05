@@ -138,15 +138,15 @@ a{
 }
 .contatto{
     align-items: center;
-    height: 90px;
-    border: 1px solid lightgrey;
+    height: 80px;
+    border-bottom: 1.5px solid grey;
     padding: 10px;
 }
 .contatto img{
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    border: 1.5px solid grey;
+    border: 1px solid lightgrey;
     cursor: pointer;
 }
 .contatto span{
@@ -154,6 +154,9 @@ a{
     font-size: 26px;
     cursor: pointer;
     padding-left: 10px;
+}
+.contatto_cliccato{
+    background-color: grey;
 }
 
 /* ///contatti */

@@ -22,7 +22,11 @@ let app = new Vue ({
                 name: "Draco",
                 avatar: './assets/img/draco.jpg',
             }
-        ]
+        ],
+        chatShown:{
+            name: "Ron",
+            avatar: './assets/img/ron.jpg'
+        }
         
         
     },

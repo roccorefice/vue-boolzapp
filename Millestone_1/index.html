@@ -40,18 +40,20 @@
                         <input type="search" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <ul class="contatti" v-if="contatti.length > 0">
-                        <li v-for="contatto in contatti" class="contatto d_flex" >
+                        <li v-for="contatto in contatti" class="contatto d_flex " >
                             <img :src="contatto.avatar">
                             <span>{{contatto.name}}</span>
                         </li>
                     </ul>
-                   
                 </div>
 
 
                 <div class="sidebar_right">
-                    <div class="header_right">
-                        nome contatto
+                    <div class="header_right contatto d_flex">
+                        <div class="infoUser contatto d_flex">
+                            <img :src="chatShown.avatar" alt="">
+                            <span>{{chatShown.name}}</span> 
+                        </div>
                     </div>
                     <div class="chat_window">
                         
